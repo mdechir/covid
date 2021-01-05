@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap User Management Data Table</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/adminStyle.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <h2>Utilisateur <b>Gestionnaire</b></h2>
+                        </div>
+                    </div>
+                </div><!-- Utiliser les method get de l'objet user pour return dans chaque case du tableau l'information correspondante -->
+                <table class="table table-striped table-hover"><!-- Utiliser une boucle for ou while pour afficher tout les user de la table-->
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Date de creation</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><b>Michael Holz</b></td>
+                            <td>contact@hotmail.com</td>
+                            <td>04/10/2013</td>
+                            <td>Admin</td>
+                            <td><!-- TODO Executer la fonction delete user lorsque on appuie sur la croix-->
+                                <!-- TODO pour l'écrous faire en sorte qu'au click de la souris ça transforme la ligne cliqué en un formulaire lors qu'on click sur le bouton modifier 
+                                    du formulaire ça modifie les info en base -->
+                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE8B8;</i></a>
+                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE5C9;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><b>Michael Holz</b></td>
+                            <td>contact@hotmail.com</td>
+                            <td>04/10/2013</td>
+                            <td>Admin</td>
+                            <td>
+                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE8B8;</i></a>
+                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE5C9;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><b>Michael Holz</b></td>
+                            <td>contact@hotmail.com</td>
+                            <td>04/10/2013</td>
+                            <td>Admin</td>
+                            <td>
+                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE8B8;</i></a>
+                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE5C9;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><b>Michael Holz</b></td>
+                            <td>contact@hotmail.com</td>
+                            <td>04/10/2013</td>
+                            <td>Admin</td>
+                            <td>
+                                <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE8B8;</i></a>
+                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                                        class="material-icons">&#xE5C9;</i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table><!--
+                <div class="clearfix">
+                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#">Previous</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                    </ul>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
