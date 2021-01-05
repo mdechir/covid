@@ -1,5 +1,19 @@
 <!------ Include the above in your HEAD tag ---------->
-<?php include 'struct/entete.html'; ?>
+<?php 
+
+    session_start();
+
+    include 'struct/entete.html'; 
+    include 'struct/header.php';
+    
+
+
+
+
+
+
+?>
+
 <div class="offcanvas-menu-wrapper">
     <div class="offcanvas__logo">
         <a href="index.php"><img src="../img/logo.png" alt=""></a>
@@ -39,7 +53,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                                <form id="login-form" action="index.php" method="post" role="form" style="display: block;">
                                     <div class="form-group">
                                         <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                     </div>
@@ -61,13 +75,13 @@
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="text-center">
-                                                    <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Mot de passe oublié?</a>
+                                                    <a href="index.php" tabindex="5" class="forgot-password">Mot de passe oublié?</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
-                                <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                                <form id="register-form" action="index.php" method="post" role="form" style="display: none;">
                                     <div class="form-group">
                                         <input type="text" name="nom" id="nom" tabindex="1" class="form-control" placeholder="Nom" value="">
                                     </div>
