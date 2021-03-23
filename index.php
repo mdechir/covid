@@ -9,12 +9,11 @@
 
 <body>
     <?php
-    try{
-        $pdo=new PDO('mysql:host=mysql-dechirmathys.alwaysdata.net;dbname=dechirmathys_virus', '229073', 'TEST123Belddfsd');
+    if(!is_null($mabase)){
         echo "coucou";
     }
-    catch(PDOException $e){
-        echo $e->getMessage();
+    else{
+        echo "Pas de connexion a la bases";
     }
     ?>
     
