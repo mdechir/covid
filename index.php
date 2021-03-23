@@ -16,7 +16,6 @@
             echo '<a href="combat.php">vient combatre</a>';
         } 
         else {
-            echo "c'est ouf";
             echo $errorMessage;
         }
     ?>

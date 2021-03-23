@@ -88,15 +88,15 @@ function afficheFormulaireConnexion($mabase){
     ?>
         <form action="" method="post" >
             <div>
-                <label for="login">Enter your login: </label>
+                <label for="login">login: </label>
                 <input type="text" name="login" id="login" required>
             </div>
             <div >
-                <label for="password">Enter your pass: </label>
+                <label for="password">pass: </label>
                 <input type="password" name="password" id="password" required>
             </div>
             <div >
-                <input type="submit" value="Go!" >
+                <input type="submit" value="Se connecter" >
             </div>
         </form>
     <?php
