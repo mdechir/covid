@@ -18,20 +18,20 @@ catch(Exception $e) {
 if(!is_null($mabase)){
     if (isset($_SESSION["Connected"]) && $_SESSION["Connected"]===true){
         $access = true;
-        $access = afficheFormulaireLogout();
+        $access = afficheFormulaireLogout($mabase);
     }
     else {
         $access = false;
         $errorMessage.= "Vous devez vous connectez";
         // Affichage de formulaire si pas deconnexion
-        $access = afficheFormulaireConnexion();
+        $access = afficheFormulaireConnexion($mabase);
     } 
 } 
 else {
     $errorMessage.= "Vous n'avez pas les bases";
 }
 
-function afficheFormulaireLogout(){
+function afficheFormulaireLogout($mabase){
     //traitement du formulaire
     $afficheForm = true;
     $access = true;
@@ -40,7 +40,7 @@ function afficheFormulaireLogout(){
         $_SESSION["Connected"]=false;
         session_unset();
         session_destroy();
-        afficheFormulaireConnexion();
+        afficheFormulaireConnexion($mabase);
         $afficheForm = false;
         $access = false;
     } 
@@ -61,18 +61,23 @@ function afficheFormulaireLogout(){
 }
 
 
-function afficheFormulaireConnexion(){
+function afficheFormulaireConnexion($mabase){
     //traitement du formulaire
     $access = false;
     if( isset($_POST["login"]) && isset($_POST["password"])){
         //verif mdp en BDD
 
-        //si mdp = ok
-        $access = true;
-        $_SESSION["Connected"]=true;
-        $afficheForm = false;
-        //si on est co on affiche le formulaire de deco
-        afficheFormulaireLogout();
+        $Result = $mabase->query("SELECT * FROM `User` WHERE `nom`='".$_POST['login']."' AND `mdp` = '".$_POST['password']."'");
+        if($tab = $Result->fetch()){ 
+             //si mdp = ok
+            $access = true;
+            $_SESSION["Connected"]=true;
+            $afficheForm = false;
+            //si on est co on affiche le formulaire de deco
+            afficheFormulaireLogout($mabase);
+        }else{
+            $afficheForm = true;
+        }
 
     }
     else {

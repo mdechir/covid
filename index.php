@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,7 @@
         include "fonction.php"; 
         if($access) {
             echo "BIENVENUE sur MON SITE";
+            echo '<a href="combat.php">vient combatre</a>';
         } 
         else {
             echo "c'est ouf";
