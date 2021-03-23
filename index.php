@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,14 @@
 
 <body>
     <?php
-    if(!is_null($mabase)){
-        echo "coucou";
-    }
-    else{
-        echo "Pas de connexion a la bases";
-    }
+        include "fonction.php"; 
+        if($access) {
+            echo "BIENVENUE sur MON SITE";
+        } 
+        else {
+            echo "c'est ouf";
+            echo $errorMessage;
+        }
     ?>
     
 </body>
