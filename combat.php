@@ -1,7 +1,4 @@
-<?php 
-session_start();
-
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,16 +10,15 @@ session_start();
     <title>Combat</title>
 </head>
 <body> 
-    <?
-
+    <?php
     include "fonction.php"; 
 
     if($access) {
-        echo "BIENVENUE sur CE COMBAT";
-
+        echo "BIENVENUE sur CE COMBAT ".$Joueur1->getPrenom();
+        echo "TU COMBAT AVEC ".$Joueur1->getNomPersonnage();
+        echo '<a href="index.php" >retour menu</a>';
     }
     else {
-        echo "c'est ouf";
         echo $errorMessage;
     }
     ?>
